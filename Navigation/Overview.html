@@ -1,0 +1,465 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>DC Circuit Analysis</title><meta name="generator" content="MATLAB 9.11"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2021-12-08"><meta name="DC.source" content="Overview.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>DC Circuit Analysis</h1><p>
+<span style="font-family:Arial">
+<span style="font-size:12pt">
+<h2> Information </h2>
+This curriculum module teaches DC circuit analysis using interactive
+<a href="https://www.mathworks.com/products/matlab/live-editor.html">live scripts</a>
+and <a href="https://www.mathworks.com/products/simscape.html">Simscape&trade;</a> models.
+Six essential topics, listed in the table below, are covered.
+There are two components for each topic: an introduction and a virtual lab.
+The introduction explains the technique and offers opportunities to develop intuition using simulation.
+In the labs, you can apply your knowledge to analyze circuits, take measurements, and design circuits to meet requirements.
+Learning goals for each topic are described below.
+<br>
+<br>
+The lab solutions are available upon instructor request. If you
+would like to request solutions, find an issue,
+or have a suggestion, email the MathWorks online teaching team at
+onlineteaching@mathworks.com
+<br>
+<br>
+<h2> Getting Started </h2>
+<ol>
+<li>
+Make sure that you have all the required products (listed below)
+installed. If you are missing a product, add it using the
+<a href="https://www.mathworks.com/products/matlab/add-on-explorer.html">
+Add-On Explorer.</a> To install an add-on, go to the <b>Home</b>
+tab and select <img src="../Images/add-ons.png" style="margin:0px;" height=12> <b> Add-Ons > Get Add-Ons</b>.
+</li>
+<li>
+Watch the 2-minute introductory videos linked below to familiarize yourself with Simscape and the virtual equipment.
+<ul style="margin-bottom:0px">
+  <li>-- links to videos -- </li>
+  <li><a href="https://user-images.githubusercontent.com/81383420/134724074-25ac1212-2aa7-429b-b93d-550667641cf7.mp4"> Video 1 </a></li>
+</ul>
+</li>
+<li>
+Get started with each topic by clicking the link in the table below to access the
+interactive example.
+</li>
+<li>
+Once you have finished learning the background
+material in the interactive example, complete the corresponding virtual lab.
+</li>
+</ol>
+<h2> Products </h2>
+MATLAB, Simulink&reg;, Simscape, Simscape Electrical&trade;, DSP System Toolbox&trade;
+<br>
+<br>
+<h2> Modules </h2>
+<table border=1 style="margin-left:20px; cellpadding:15px;">
+<tr>
+  <th>Examples and Virtual Labs</th>
+  <th>Learning Goals</th>
+  <th>Models</th>
+</tr>
+<tr>
+  <td>
+      <b>Mesh Analysis</b>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Interactive example: <a href="matlab:edit MeshAnalysis.mlx;"><code>MeshAnalysis.mlx</code></a></li>
+          <li>Virtual lab: <a href="matlab:edit MeshAnalysisLab.mlx;"><code>MeshAnalysisLab.mlx</code></a></li>
+      </ul>
+      <img src = "../Images/meshes.png" height=100 style="margin-top:5px; margin-bottom:0px"></a>
+  </td>
+  <td>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Use mesh analysis to compute currents through a linear circuit.</li>
+          <li>Solve the matrix form of circuit equations in MATLAB&reg;.</li>
+      	<li>Model and analyze linear circuits in Simscape.</li>
+      </ul>
+  </td>
+  <td>
+      <a href="matlab:MeshAnalysisExample;"><code>MeshAnalysisExample.slx</code><br></a>
+      <a href="matlab:MeshAnalysisCircuit;"><code>MeshAnalysisCircuit.slx</code><br></a>
+  </td>
+</tr>
+</tr>
+<tr>
+  <td>
+      <b>Nodal Analysis</b>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Interactive example: <a href="matlab:edit NodalAnalysis.mlx;"><code>NodalAnalysis.mlx</code></a></li>
+          <li>Virtual lab: <a href="matlab:edit NodalAnalysisLab.mlx;"><code>NodalAnalysisLab.mlx</code></a></li>
+      </ul>
+      <img src = "../Images/nodes.png" height=100 style="margin-top:5px; margin-bottom:0px"></a>
+  </td>
+  <td>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Use nodal analysis to compute voltages.</li>
+          <li>Solve the matrix form of circuit equations in MATLAB.</li>
+      	<li>Model and analyze linear circuits in Simscape.</li>
+      </ul>
+  </td>
+  <td>
+      <a href="matlab:NodalAnalysisExample;"><code>NodalAnalysisExample.slx</code><br></a>
+      <a href="matlab:NodalAnalysisCircuit;"><code>NodalAnalysisCircuit.slx</code><br></a>
+  </td>
+</tr>
+<tr>
+  <td>
+      <b>Thevenin and Norton Equivalent Circuits</b>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Interactive example: <a href="matlab:edit TheveninNorton.mlx;"><code>TheveninNorton.mlx</code></a></li>
+          <li>Virtual lab: <a href="matlab:edit TheveninNortonLab.mlx;"><code>TheveninNortonLab.mlx</code></a></li>
+      </ul>
+      <img src = "../Images/TheveninNorton.png" height=75 style="margin-top:5px; margin-bottom:0px"></a>
+  </td>
+  <td>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Explain Thevenin and Norton equivalent circuits.</li>
+          <li>Solve for Thevenin and Norton equivalents.</li>
+          <li>Compare circuits to their Thevenin and Norton equivalents.</li>
+      </ul>
+  </td>
+  <td>
+      <a href="matlab:EquivalentCircuitDemo;"><code>EquivalentCircuitDemo.slx</code><br></a>
+      <a href="matlab:TheveninNortonCircuit;"><code>TheveninNortonCircuit.slx</code><br></a>
+  </td>
+</tr>
+<tr>
+  <td>
+      <b>RC Circuits</b>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Interactive example: <a href="matlab:edit RCCircuits.mlx;"><code>RCCircuits.mlx</code></a></li>
+          <li>Virtual lab: <a href="matlab:edit RCCircuitsLab.mlx;"><code>RCCircuitsLab.mlx</code></a></li>
+      </ul>
+      <img src = "../Images/rccircuit.png" height=100 style="margin-top:5px; margin-bottom:0px"></a>
+  </td>
+  <td>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Simulate charging and discharging RC circuits.</li>
+          <li>Plot solutions of RC circuit differential equations.</li>
+      	<li>Measure the time constant of an RC circuit.</li>
+      </ul>
+  </td>
+  <td>
+      <a href="matlab:RCCircuit;"><code>RCCircuit.slx</code><br></a>
+      <a href="matlab:RCCircuitTau;"><code>RCCircuitTau.slx</code><br></a>
+  </td>
+</tr>
+<tr>
+  <td>
+      <b>RLC Circuits</b>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Interactive example: <a href="matlab:edit RLCCircuits.mlx;"><code>RLCCircuits.mlx</code></a></li>
+          <li>Virtual lab: <a href="matlab:edit RLCCircuitsLab.mlx;"><code>RLCCircuitsLab.mlx</code></a></li>
+      </ul>
+      <img src = "../Images/rlccircuit.png" height=100 style="margin-top:5px; margin-bottom:0px"></a>
+  </td>
+  <td>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Compare the response of first and second order circuits.</li>
+          <li>Analyze a second order RLC circuit differential equation.</li>
+      	<li>Solve for the natural frequency and damping in an RLC circuit.</li>
+      	<li>Compare underdamped, overdamped, and critically damped circuits.</li>
+      </ul>
+  </td>
+  <td>
+      <a href="matlab:RCRLCircuits;"><code>RCRLCircuits.slx</code><br></a>
+      <a href="matlab:RLCCircuit;"><code>RLCCircuit.slx</code><br></a>
+      <a href="matlab:VirtualOscilloscope;"><code>VirtualOscilloscope.slx</code><br></a>
+  </td>
+</tr>
+<tr>
+  <td>
+      <b>Op Amps</b>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Interactive example <a href="matlab:edit OpAmps.mlx;"><code>OpAmps.mlx</code></a></li>
+          <li>Virtual lab: <a href="matlab:edit OpAmpLab.mlx;"><code>OpAmpLab.mlx</code></a></li>
+      </ul>
+      <img src = "../Images/opamps.png" height=75 style="margin-top:5px; margin-bottom:0px"></a>
+  </td>
+  <td>
+  	<ul style="margin-top:5px; margin-bottom:10px">
+          <li>Describe the open-loop behavior of an op amp.</li>
+          <li>Compare ideal and non-ideal op amp behavior.</li>
+          <li>Analyze negative feedback op amp circuits.</li>
+      	<li>Design circuits using combinations of basic op amp circuits.</li>
+      </ul>
+  </td>
+  <td>
+      <a href="matlab:OpAmpOpenLoop;"><code>OpAmpOpenLoop.slx</code><br></a>
+      <a href="matlab:OpAmpFeedback;"><code>OpAmpFeedback.slx</code><br></a>
+      <a href="matlab:OpAmpNoninverting;"><code>OpAmpNoninverting.slx</code><br></a>
+      <a href="matlab:OpAmpCircuits;"><code>OpAmpCircuits.slx</code><br></a>
+      <a href="matlab:OpAmpLab;"><code>OpAmpLab.slx</code><br></a>
+  </td>
+</tr>
+</table>
+<br>
+</span>
+</span>
+</p><p>Copyright 2021 The MathWorks&#8482;, Inc.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2021b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% DC Circuit Analysis
+%
+% <html>
+% <span style="font-family:Arial">
+% <span style="font-size:12pt">
+% <h2> Information </h2>
+% This curriculum module teaches DC circuit analysis using interactive 
+% <a href="https://www.mathworks.com/products/matlab/live-editor.html">live scripts</a>
+% and <a href="https://www.mathworks.com/products/simscape.html">Simscape&trade;</a> models. 
+% Six essential topics, listed in the table below, are covered.
+% There are two components for each topic: an introduction and a virtual lab. 
+% The introduction explains the technique and offers opportunities to develop intuition using simulation. 
+% In the labs, you can apply your knowledge to analyze circuits, take measurements, and design circuits to meet requirements. 
+% Learning goals for each topic are described below.
+% <br>
+% <br>
+% The lab solutions are available upon instructor request. If you
+% would like to request solutions, find an issue,
+% or have a suggestion, email the MathWorks online teaching team at 
+% onlineteaching@mathworks.com
+% <br>
+% <br>
+% <h2> Getting Started </h2>
+% <ol>
+% <li>
+% Make sure that you have all the required products (listed below)
+% installed. If you are missing a product, add it using the 
+% <a href="https://www.mathworks.com/products/matlab/add-on-explorer.html">
+% Add-On Explorer.</a> To install an add-on, go to the <b>Home</b>
+% tab and select <img src="../Images/add-ons.png" style="margin:0px;" height=12> <b> Add-Ons > Get Add-Ons</b>.
+% </li>
+% <li>
+% Watch the 2-minute introductory videos linked below to familiarize yourself with Simscape and the virtual equipment. 
+% <ul style="margin-bottom:0px">
+%   <li>REPLACE_WITH_DASH_DASH links to videos REPLACE_WITH_DASH_DASH </li>
+%   <li><a href="https://user-images.githubusercontent.com/81383420/134724074-25ac1212-2aa7-429b-b93d-550667641cf7.mp4"> Video 1 </a></li>
+% </ul>
+% </li>
+% <li>
+% Get started with each topic by clicking the link in the table below to access the
+% interactive example. 
+% </li>
+% <li>
+% Once you have finished learning the background
+% material in the interactive example, complete the corresponding virtual lab. 
+% </li>
+% </ol>
+% <h2> Products </h2>
+% MATLAB, Simulink&reg;, Simscape, Simscape Electrical&trade;, DSP System Toolbox&trade;
+% <br>
+% <br>
+% <h2> Modules </h2>
+% <table border=1 style="margin-left:20px; cellpadding:15px;">
+% <tr>
+%   <th>Examples and Virtual Labs</th>
+%   <th>Learning Goals</th>
+%   <th>Models</th>
+% </tr>
+% <tr>
+%   <td>
+%       <b>Mesh Analysis</b>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Interactive example: <a href="matlab:edit MeshAnalysis.mlx;"><code>MeshAnalysis.mlx</code></a></li>
+%           <li>Virtual lab: <a href="matlab:edit MeshAnalysisLab.mlx;"><code>MeshAnalysisLab.mlx</code></a></li>
+%       </ul>
+%       <img src = "../Images/meshes.png" height=100 style="margin-top:5px; margin-bottom:0px"></a>
+%   </td>
+%   <td>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Use mesh analysis to compute currents through a linear circuit.</li>
+%           <li>Solve the matrix form of circuit equations in MATLAB&reg;.</li>
+%       	<li>Model and analyze linear circuits in Simscape.</li>
+%       </ul>
+%   </td>
+%   <td>
+%       <a href="matlab:MeshAnalysisExample;"><code>MeshAnalysisExample.slx</code><br></a>
+%       <a href="matlab:MeshAnalysisCircuit;"><code>MeshAnalysisCircuit.slx</code><br></a>
+%   </td>
+% </tr>
+% </tr>
+% <tr>
+%   <td>
+%       <b>Nodal Analysis</b>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Interactive example: <a href="matlab:edit NodalAnalysis.mlx;"><code>NodalAnalysis.mlx</code></a></li>
+%           <li>Virtual lab: <a href="matlab:edit NodalAnalysisLab.mlx;"><code>NodalAnalysisLab.mlx</code></a></li>
+%       </ul>
+%       <img src = "../Images/nodes.png" height=100 style="margin-top:5px; margin-bottom:0px"></a>
+%   </td>
+%   <td>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Use nodal analysis to compute voltages.</li>
+%           <li>Solve the matrix form of circuit equations in MATLAB.</li>
+%       	<li>Model and analyze linear circuits in Simscape.</li>
+%       </ul>
+%   </td>
+%   <td>
+%       <a href="matlab:NodalAnalysisExample;"><code>NodalAnalysisExample.slx</code><br></a>
+%       <a href="matlab:NodalAnalysisCircuit;"><code>NodalAnalysisCircuit.slx</code><br></a>
+%   </td>
+% </tr>
+% <tr>
+%   <td>
+%       <b>Thevenin and Norton Equivalent Circuits</b>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Interactive example: <a href="matlab:edit TheveninNorton.mlx;"><code>TheveninNorton.mlx</code></a></li>
+%           <li>Virtual lab: <a href="matlab:edit TheveninNortonLab.mlx;"><code>TheveninNortonLab.mlx</code></a></li>
+%       </ul>
+%       <img src = "../Images/TheveninNorton.png" height=75 style="margin-top:5px; margin-bottom:0px"></a>
+%   </td>
+%   <td>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Explain Thevenin and Norton equivalent circuits.</li>
+%           <li>Solve for Thevenin and Norton equivalents.</li>
+%           <li>Compare circuits to their Thevenin and Norton equivalents.</li>
+%       </ul>
+%   </td>
+%   <td>
+%       <a href="matlab:EquivalentCircuitDemo;"><code>EquivalentCircuitDemo.slx</code><br></a>
+%       <a href="matlab:TheveninNortonCircuit;"><code>TheveninNortonCircuit.slx</code><br></a>
+%   </td>
+% </tr>
+% <tr>
+%   <td>
+%       <b>RC Circuits</b>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Interactive example: <a href="matlab:edit RCCircuits.mlx;"><code>RCCircuits.mlx</code></a></li>
+%           <li>Virtual lab: <a href="matlab:edit RCCircuitsLab.mlx;"><code>RCCircuitsLab.mlx</code></a></li>
+%       </ul>
+%       <img src = "../Images/rccircuit.png" height=100 style="margin-top:5px; margin-bottom:0px"></a>
+%   </td>
+%   <td>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Simulate charging and discharging RC circuits.</li>
+%           <li>Plot solutions of RC circuit differential equations.</li>
+%       	<li>Measure the time constant of an RC circuit.</li>
+%       </ul>
+%   </td>
+%   <td>
+%       <a href="matlab:RCCircuit;"><code>RCCircuit.slx</code><br></a>
+%       <a href="matlab:RCCircuitTau;"><code>RCCircuitTau.slx</code><br></a>
+%   </td>
+% </tr>
+% <tr>
+%   <td>
+%       <b>RLC Circuits</b>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Interactive example: <a href="matlab:edit RLCCircuits.mlx;"><code>RLCCircuits.mlx</code></a></li>
+%           <li>Virtual lab: <a href="matlab:edit RLCCircuitsLab.mlx;"><code>RLCCircuitsLab.mlx</code></a></li>
+%       </ul>
+%       <img src = "../Images/rlccircuit.png" height=100 style="margin-top:5px; margin-bottom:0px"></a>
+%   </td>
+%   <td>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Compare the response of first and second order circuits.</li>
+%           <li>Analyze a second order RLC circuit differential equation.</li>
+%       	<li>Solve for the natural frequency and damping in an RLC circuit.</li>
+%       	<li>Compare underdamped, overdamped, and critically damped circuits.</li>
+%       </ul>
+%   </td>
+%   <td>
+%       <a href="matlab:RCRLCircuits;"><code>RCRLCircuits.slx</code><br></a>
+%       <a href="matlab:RLCCircuit;"><code>RLCCircuit.slx</code><br></a>
+%       <a href="matlab:VirtualOscilloscope;"><code>VirtualOscilloscope.slx</code><br></a>
+%   </td>
+% </tr>
+% <tr>
+%   <td>
+%       <b>Op Amps</b>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Interactive example <a href="matlab:edit OpAmps.mlx;"><code>OpAmps.mlx</code></a></li>
+%           <li>Virtual lab: <a href="matlab:edit OpAmpLab.mlx;"><code>OpAmpLab.mlx</code></a></li>
+%       </ul>
+%       <img src = "../Images/opamps.png" height=75 style="margin-top:5px; margin-bottom:0px"></a>
+%   </td>
+%   <td>
+%   	<ul style="margin-top:5px; margin-bottom:10px">
+%           <li>Describe the open-loop behavior of an op amp.</li>
+%           <li>Compare ideal and non-ideal op amp behavior.</li>
+%           <li>Analyze negative feedback op amp circuits.</li>
+%       	<li>Design circuits using combinations of basic op amp circuits.</li>
+%       </ul>
+%   </td>
+%   <td>
+%       <a href="matlab:OpAmpOpenLoop;"><code>OpAmpOpenLoop.slx</code><br></a>
+%       <a href="matlab:OpAmpFeedback;"><code>OpAmpFeedback.slx</code><br></a>
+%       <a href="matlab:OpAmpNoninverting;"><code>OpAmpNoninverting.slx</code><br></a>
+%       <a href="matlab:OpAmpCircuits;"><code>OpAmpCircuits.slx</code><br></a>
+%       <a href="matlab:OpAmpLab;"><code>OpAmpLab.slx</code><br></a>
+%   </td>
+% </tr>
+% </table>
+% <br>
+% </span>
+% </span>
+% </html>
+% 
+% Copyright 2021 The MathWorks(TM), Inc.
+
+##### SOURCE END #####
+--></body></html>
