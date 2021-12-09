@@ -17,7 +17,7 @@ Get started with the DC Circuit Analysis curriculum module by downloading and un
   <tr>
     <td>
         <b>1. Mesh Analysis</b><br>
-        <img height="100" src="./Images/meshes.png" style="margin:5px" >
+        <img height="120" src="https://user-images.githubusercontent.com/81383420/145477841-2fece5f2-20b7-4926-b6f6-33b84d3d9f31.png" >
     </td>
     <td>    
         <ul>
@@ -30,7 +30,7 @@ Get started with the DC Circuit Analysis curriculum module by downloading and un
   <tr>
     <td>
         <b>2. Nodal Analysis</b><br>
-        <img height="100" src="./Images/nodes.png" style="margin:5px" >
+        <img height="120" src="https://user-images.githubusercontent.com/81383420/145477842-6bfc6893-7338-43d1-aac5-a8cfa8b77c04.png" >
     </td>
     <td>    
         <ul>
@@ -42,8 +42,8 @@ Get started with the DC Circuit Analysis curriculum module by downloading and un
   </tr>
   <tr>
     <td>
-        <b>3. Thevenin and Norton Equivalent Circuits</b><br>
-        <img height="100" src="./Images/TheveninNorton.png" style="margin:5px" >
+        <b>3. Thevenin and Norton Equivalent Circuits</b><br>  
+        <img height="120" src="https://user-images.githubusercontent.com/81383420/145478206-749ed898-654a-4da0-bdeb-24d852f12263.png" >     
     </td>
     <td>    
         <ul>
@@ -55,8 +55,8 @@ Get started with the DC Circuit Analysis curriculum module by downloading and un
   </tr>
   <tr>
     <td>
-        <b>4. RC Circuits</b><br>
-        <img height="100" src="./Images/rccircuit.png" style="margin:5px" >
+        <b>4. RC Circuits</b><br>      
+        <img height="120" src="https://user-images.githubusercontent.com/81383420/145478990-8ee2459d-7d4f-4a29-aa5c-42b6203a4a75.png" >  
     </td>
     <td>    
         <ul>
@@ -69,7 +69,7 @@ Get started with the DC Circuit Analysis curriculum module by downloading and un
   <tr>
     <td>
         <b>5. RLC Circuits</b><br>
-        <img height="100" src="./Images/rlccircuit.png" style="margin:5px" >
+        <img height="120" src="https://user-images.githubusercontent.com/81383420/145479597-53ead5e5-5ae7-45b1-b4cb-df8bb555ed87.png" >  
     </td>
     <td>    
         <ul>
@@ -83,7 +83,7 @@ Get started with the DC Circuit Analysis curriculum module by downloading and un
   <tr>
     <td>
         <b>6. Op Amps</b><br>
-        <img height="100" src="./Images/opamps.png" style="margin:5px" >
+        <img height="120" src="https://user-images.githubusercontent.com/81383420/145480411-efa3ff3e-8cf3-4e56-abe5-3d588fd45c90.png" >  
     </td>
     <td>    
         <ul>
