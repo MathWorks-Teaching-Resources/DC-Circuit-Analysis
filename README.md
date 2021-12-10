@@ -1,4 +1,4 @@
-# DC Circuit Analysis [![View DC Circuit Analysis on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/)  
+# DC Circuit Analysis [![View DC Circuit Analysis on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/103375-dc-circuit-analysis)
 **Curriculum Module**  
 _Created with R2021b. Compatible with R2021b and later releases._  
 
@@ -104,6 +104,8 @@ https://user-images.githubusercontent.com/81383420/145588577-d98c4563-b41b-447c-
 https://user-images.githubusercontent.com/81383420/145589989-f7ae4a32-cab3-405d-b7e8-476e34d697b5.mp4
 
 https://user-images.githubusercontent.com/81383420/145592175-ed68b140-f7d7-4355-85d4-a47feb8a82ec.mp4
+
+<b>Note</b>: The videos can be viewed from the [GitHub repository readme](https://github.com/MathWorks-Teaching-Resources/DC-Circuit-Analysis/blob/main/README.md).
 
 ## Suggested Prework ##
 [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html) – a free two-hour introductory tutorial that teaches the essentials of MATLAB.
