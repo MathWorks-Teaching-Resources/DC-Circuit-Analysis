@@ -96,6 +96,16 @@ Get started with the DC Circuit Analysis curriculum module by downloading and un
   </tr>
 </table>
 
+## How-to Videos ##
+These short videos demonstrate some of the basic techniques used to simulate and measure circuits in the module. 
+
+https://user-images.githubusercontent.com/81383420/145584785-035519fb-fcae-489b-9a68-bed6773d7551.mp4
+
+https://user-images.githubusercontent.com/81383420/145584796-a27e6716-1184-4491-806d-ee6829453928.mp4
+
+https://user-images.githubusercontent.com/81383420/145584812-43de99bd-11e6-41d7-91a9-6980bb13f386.mp4
+
+
 ## Suggested Prework ##
 [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html) – a free two-hour introductory tutorial that teaches the essentials of MATLAB.
 
