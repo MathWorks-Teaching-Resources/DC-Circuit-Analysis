@@ -109,6 +109,8 @@ https://user-images.githubusercontent.com/81383420/145592175-ed68b140-f7d7-4355-
 
 ## Suggested Prework ##
 [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html) – a free two-hour introductory tutorial that teaches the essentials of MATLAB.
+[Circuit Simulation Onramp](https://www.mathworks.com/learn/tutorials/circuit-simulation-onramp.html) – a free two-hour introductory tutorial that teaches the basics of simulating electrical circuits in Simscape.
+
 
 ## Products ##
 MATLAB, Simulink&reg;, Simscape, Simscape Electrical&trade;, DSP System Toolbox&trade;
