@@ -26,6 +26,3 @@
 *.pdf binary
 *.png binary
 *.xlsx binary
-
-# Ignore HTML
-*.html linguist-detectable=false
