@@ -118,7 +118,7 @@ https://user-images.githubusercontent.com/81383420/145592175-ed68b140-f7d7-4355-
 MATLAB, Simulink&reg;, Simscape, Simscape Electrical&trade;, DSP System Toolbox&trade;
 
 ## License ##
-The license for this module is available in the [LICENSE.md](license.md) file in this GitHub repository.
+The license for this module is available in the [LICENSE.md](LICENSE.md) file in this GitHub repository.
 
 ## Educator Resources ##
 * [Featured Courseware](https://www.mathworks.com/academia/courseware/course-materials.html)
