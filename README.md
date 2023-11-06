@@ -102,7 +102,7 @@ Get started with the DC Circuit Analysis curriculum module by downloading and un
 These short videos demonstrate some of the basic techniques used to simulate and measure circuits in the module. 
 
 ### Building a Circuit ###
-[https://user-images.githubusercontent.com/81383420/145588577-d98c4563-b41b-447c-acbb-afe0f6d70da5.mp4](https://github.com/MathWorks-Teaching-Resources/DC-Circuit-Analysis/blob/main/Images/RCCircuitConstruction.mp4)
+https://user-images.githubusercontent.com/81383420/145588577-d98c4563-b41b-447c-acbb-afe0f6d70da5.mp4
 
 ### Analyzing with a Multimeter ###
 https://user-images.githubusercontent.com/81383420/145589989-f7ae4a32-cab3-405d-b7e8-476e34d697b5.mp4
