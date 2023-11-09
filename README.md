@@ -39,7 +39,7 @@ Use the [<img src="Images/image_1.png" width="136" alt="image_1.png">](https://m
 
 ### **On Desktop:**
 
-Download or clone this repository. Open MATLAB, navigate to the folder containing these scripts and double-click on [DCCircuitAnalysis.prj](matlab: openProject("DCCircuitAnalysis.prj")). It will add the appropriate files to your MATLAB path and open an app that asks you where you would like to start. 
+Download or clone this repository. Open MATLAB, navigate to the folder containing these scripts and double-click on [DCCircuitAnalysis.prj](https://github.com/MathWorks-Teaching-Resources/DC-Circuit-Analysis/blob/release/DCCircuitAnalysis.prj). It will add the appropriate files to your MATLAB path and open an app that asks you where you would like to start. 
 
 
 Ensure you have all the required products ([listed below](#H_E850B4FF)) installed. If you need to include a product, add it using the Add-On Explorer. To install an add-on, go to the **Home** tab and select  <img src="Images/image_2.png" width="16" alt="image_2.png"> **Add-Ons** > **Get Add-Ons**. 
@@ -91,14 +91,9 @@ Ensure you have all the required products ([listed below](#H_E850B4FF)) installe
 
 These short videos demonstrate some of the basic techniques used to simulate and measure circuits in the module.
 
-### Building a Circuit ###
-https://user-images.githubusercontent.com/81383420/145588577-d98c4563-b41b-447c-acbb-afe0f6d70da5.mp4
-
-### Analyzing with a Multimeter ###
-https://user-images.githubusercontent.com/81383420/145589989-f7ae4a32-cab3-405d-b7e8-476e34d697b5.mp4
-
-### Demonstrating Oscilloscope Operation ###
-https://user-images.githubusercontent.com/81383420/145592175-ed68b140-f7d7-4355-85d4-a47feb8a82ec.mp4 
+-  [Building a Circuit](https://user-images.githubusercontent.com/81383420/145588577-d98c4563-b41b-447c-acbb-afe0f6d70da5.mp4) 
+-  [Analyzing with a Multimeter](https://user-images.githubusercontent.com/81383420/145589989-f7ae4a32-cab3-405d-b7e8-476e34d697b5.mp4) 
+-  [Demonstrating Oscilloscope Operation](https://user-images.githubusercontent.com/81383420/145592175-ed68b140-f7d7-4355-85d4-a47feb8a82ec.mp4) 
 
 <a name="H_F61733D7"></a>
 # License
