@@ -11,6 +11,7 @@ on:
 jobs:
   test:
     strategy: 
+       max-parallel: 1
       fail-fast: false
       matrix:
         MATLABVersion: [R2023a,R2023b]
