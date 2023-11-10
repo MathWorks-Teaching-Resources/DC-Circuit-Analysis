@@ -45,6 +45,8 @@ classdef SmokeTests < matlab.unittest.TestCase
 
         function smokeTest(testCase)
             myFiles = testCase.results.Name;
+            fid = fopen(fullfile("SoftwareTests","TestResults_"+release_version+".txt"),"w");
+            fprintf(fid,"Version,File,Status,ElapsedTime\n");
             for kTest = 1:length(myFiles)
                 try
                     disp("Running " + myFiles(kTest))
@@ -53,14 +55,17 @@ classdef SmokeTests < matlab.unittest.TestCase
                     testCase.results.Time(kTest) = toc;
                     disp("Finished " + myFiles(kTest))
                     testCase.results.Passed(kTest) = true;
+                    fprintf(fid,"%s,%s,%s,%s\n",release_version,myFiles(kTest),"passed",testCase.results.Time(kTest));
                 catch ME
                     testCase.results.Time(kTest) = toc;
                     disp("Failed " + myFiles(kTest) + " because " + ...
                         newline + ME.message)
                     testCase.results.Message(kTest) = ME.message;
+                    fprintf(fid,"%s,%s,%s,%s\n",release_version,myFiles(kTest),"failed",testCase.results.Time(kTest));
                 end
-                clearvars -except kTest testCase myFiles
+                clearvars -except kTest testCase myFiles fid
             end
+            fclose(fid);
             struct2table(testCase.results)
         end
 
