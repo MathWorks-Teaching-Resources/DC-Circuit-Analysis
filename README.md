@@ -58,37 +58,37 @@ Ensure you have all the required products ([listed below](#H_E850B4FF)) installe
 ## [**MeshAnalysis.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=MeshAnalysis.mlx)
 |  | **In this script, students will...** | **Academic disciplines**  |
 | :-- | :-- | :-- |
-| <img src="Images/image_3.png" width="171" alt="image_3.png"> | • Use mesh analysis to compute currents through a linear circuit.• Solve the matrix form of circuit equations in MATLAB.• Model and analyze linear circuits in Simscape. | • Electrical Engineering  |
+| <img src="Images/image_3.png" width="171" alt="image_3.png"> | <br>• Use mesh analysis to compute currents through a linear circuit. <br>• Solve the matrix form of circuit equations in MATLAB. <br>• Model and analyze linear circuits in Simscape. | • Electrical Engineering  |
 
 <a name="H_17056DF7"></a>
 ## [**NodalAnalysis.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=NodalAnalysis.mlx)
 |  | **In this script, students will...** | **Academic disciplines**  |
 | :-- | :-- | :-- |
-| <img src="Images/image_4.png" width="171" alt="image_4.png"> | • Use nodal analysis to compute voltages.• Solve the matrix form of circuit equations in MATLAB.• Model and analyze linear circuits in Simscape. | • Electrical Engineering  |
+| <img src="Images/image_4.png" width="171" alt="image_4.png"> |  <br>• Use nodal analysis to compute voltages. <br>• Solve the matrix form of circuit equations in MATLAB. <br>• Model and analyze linear circuits in Simscape. | • Electrical Engineering  |
 
 <a name="H_93FB3755"></a>
 ## [**TheveninNorton.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=TheveninNorton.mlx)
 |  | **In this script, students will...** | **Academic disciplines**  |
 | :-- | :-- | :-- |
-| <img src="Images/image_5.png" width="171" alt="image_5.png"> | • Explain Thevenin and Norton equivalent circuits.• Solve for Thevenin and Norton equivalents.• Compare circuits to their Thevenin and Norton equivalents. | • Electrical Engineering  |
+| <img src="Images/image_5.png" width="171" alt="image_5.png"> |  <br>• Explain Thevenin and Norton equivalent circuits. <br>• Solve for Thevenin and Norton equivalents. <br>• Compare circuits to their Thevenin and Norton equivalents. | • Electrical Engineering  |
 
 <a name="H_D4F9A4D1"></a>
 ## [**RCCircuits.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=RCCircuits.mlx)
 |  | **In this script, students will...** | **Academic disciplines**  |
 | :-- | :-- | :-- |
-| <img src="Images/image_6.png" width="171" alt="image_6.png"> | • Simulate charging and discharging RC circuits.• Plot solutions of RC circuit differential equations.• Measure the time constant of an RC circuit. | • Electrical Engineering  |
+| <img src="Images/image_6.png" width="171" alt="image_6.png"> |  <br>• Simulate charging and discharging RC circuits. <br>• Plot solutions of RC circuit differential equations. <br>• Measure the time constant of an RC circuit. | • Electrical Engineering  |
 
 <a name="H_1E0A6441"></a>
 ## [**RLCCircuits.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=RLCCircuits.mlx)
 |  | **In this script, students will...** | **Academic disciplines**  |
 | :-- | :-- | :-- |
-| <img src="Images/image_7.png" width="171" alt="image_7.png"> | • Compare the response of first and second order circuits.• Analyze a second order RLC circuit differential equation.• Solve for the natural frequency and damping in an RLC circuit.• Compare underdamped, overdamped, and critically damped circuits. | • Electrical Engineering  |
+| <img src="Images/image_7.png" width="171" alt="image_7.png"> |  <br>• Compare the response of first and second order circuits. <br>• Analyze a second order RLC circuit differential equation. <br>• Solve for the natural frequency and damping in an RLC circuit. <br>• Compare underdamped, overdamped, and critically damped circuits. | • Electrical Engineering  |
 
 <a name="H_E550DF08"></a>
 ## [**OpAmps.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=OpAmps.mlx)
 |  | **In this script, students will...** | **Academic disciplines**  |
 | :-- | :-- | :-- |
-| <img src="Images/image_8.png" width="171" alt="image_8.png"> | • Describe the open-loop behavior of an op amp.• Compare ideal and non-ideal op amp behavior.• Analyze negative feedback op amp circuits.• Design circuits using combinations of basic op amp circuits. | • Electrical Engineering  |
+| <img src="Images/image_8.png" width="171" alt="image_8.png"> |  <br>• Describe the open-loop behavior of an op amp. <br>• Compare ideal and non-ideal op amp behavior. <br>• Analyze negative feedback op amp circuits. <br>• Design circuits using combinations of basic op amp circuits. | • Electrical Engineering  |
 
 # How-To Videos
 
@@ -119,4 +119,5 @@ Looking for more? Find an issue? Have a suggestion? Please contact the [MathWork
 
  *©* Copyright 2023 The MathWorks™, Inc
 
-
+
+
