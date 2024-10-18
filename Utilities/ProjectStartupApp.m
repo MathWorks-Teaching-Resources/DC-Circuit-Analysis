@@ -2,21 +2,21 @@ classdef ProjectStartupApp < matlab.apps.AppBase
 
     % Properties that correspond to app components
     properties (Access = public)
-        UIFigure        matlab.ui.Figure
-        TabGroup        matlab.ui.container.TabGroup
-        WelcomeTab      matlab.ui.container.Tab
-        Image           matlab.ui.control.Image
-        READMEButton    matlab.ui.control.Button
-        ReviewUsButton  matlab.ui.control.Button
-        MainMenuButton  matlab.ui.control.Button
-        WelcomeTitle    matlab.ui.control.Label
-        TabReview       matlab.ui.container.Tab
-        OtherButton     matlab.ui.control.Button
-        StudentButton   matlab.ui.control.Button
-        FacultyButton   matlab.ui.control.Button
-        Q1              matlab.ui.control.Label
-        ReviewTitle     matlab.ui.control.Label
-        ReviewText      matlab.ui.control.Label
+        StartUpAppUIFigure  matlab.ui.Figure
+        TabGroup            matlab.ui.container.TabGroup
+        WelcomeTab          matlab.ui.container.Tab
+        Image               matlab.ui.control.Image
+        READMEButton        matlab.ui.control.Button
+        ReviewUsButton      matlab.ui.control.Button
+        MainMenuButton      matlab.ui.control.Button
+        WelcomeTitle        matlab.ui.control.Label
+        TabReview           matlab.ui.container.Tab
+        OtherButton         matlab.ui.control.Button
+        StudentButton       matlab.ui.control.Button
+        FacultyButton       matlab.ui.control.Button
+        Q1                  matlab.ui.control.Label
+        ReviewTitle         matlab.ui.control.Label
+        ReviewText          matlab.ui.control.Label
     end
 
     
@@ -32,21 +32,25 @@ classdef ProjectStartupApp < matlab.apps.AppBase
     
     1. Change "Module Template" in app.WelcomeTitle by your module name
     2. Change "Module Template" in app.ReviewTitle by your module name
-    3. Change image in app.Image by the cover image you would like for your
+    3. Change the GitHubRepository (line 25) to the correct value
+    4. Change image in app.Image by the cover image you would like for your
        module. This image should be located in rootFolder/Images
-    4. Create your MS Form:
-        a. Make a copy of the Faculty and the Student survey
+    5. Create your MS Form:
+        a. Make a copy of the Faculty and the Student Template surveys
         b. Customize the name of the survey to match the name of your
            survey
         c. Click on "Collect responses", select "Anyone can respond" and
-        copy the form link to the app private property below.
+        copy the form link to SetupAppLinks (see step 6).
     5. Create your MS Sway:
         a. Go to MS Sway
         b. Create a blank sway
         c. Add the name of your module to the title box
         d. Click "Share", Select "Anyone with a link", Select "View"
-        e. Copy the sway link into the app private properties below.
-    6. Add the Survey and Sway link to Utilities/SurveyLinks
+        e. Copy the sway link to SetupAppLinks (see step 6).
+    6. Add the Survey and Sway link to Utilities/SurveyLinks using
+    SetupAppLinks.mlx in InternalFiles/RequiredFunctions/StartUpFcn
+    7. Save > Export to .m file and save the result as
+    Utilities/ProjectStartupApp.m
 
 %}
 
@@ -93,8 +97,6 @@ classdef ProjectStartupApp < matlab.apps.AppBase
 
         % Code that executes after component creation
         function startupFcn(app)
-            % Move gui to center of screen
-            movegui(app.UIFigure,"center")
 
             % Switch tab to review if has not been reviewed yet
             if isfile(fullfile("Utilities","ProjectSettings.mat"))
@@ -133,11 +135,17 @@ classdef ProjectStartupApp < matlab.apps.AppBase
 
         end
 
-        % Close request function: UIFigure
-        function UIFigureCloseRequest(app, event)
+        % Close request function: StartUpAppUIFigure
+        function StartUpAppUIFigureCloseRequest(app, event)
             if event.Source == app.READMEButton
                 open README.mlx
             elseif event.Source == app.MainMenuButton
+                open MainMenu.mlx
+            elseif event.Source == app.FacultyButton
+                open MainMenu.mlx            
+            elseif event.Source == app.StudentButton
+                open MainMenu.mlx
+            elseif event.Source == app.OtherButton
                 open MainMenu.mlx
             else
                 disp("Thank you for your time.")
@@ -147,28 +155,28 @@ classdef ProjectStartupApp < matlab.apps.AppBase
 
         % Button pushed function: MainMenuButton
         function MainMenuButtonPushed(app, event)
-            UIFigureCloseRequest(app,event)
+            StartUpAppUIFigureCloseRequest(app,event)
         end
 
         % Button pushed function: FacultyButton
         function FacultyButtonPushed(app, event)
             app.pingSway;
             app.openFacultyForm;
-            UIFigureCloseRequest(app,event)
+            StartUpAppUIFigureCloseRequest(app,event)
         end
 
         % Button pushed function: StudentButton
         function StudentButtonPushed(app, event)
             app.pingSway;
             app.openStudentForm;
-            UIFigureCloseRequest(app,event)
+            StartUpAppUIFigureCloseRequest(app,event)
         end
 
         % Button pushed function: OtherButton
         function OtherButtonPushed(app, event)
             app.pingSway;
             app.openStudentForm;
-            UIFigureCloseRequest(app,event)
+            StartUpAppUIFigureCloseRequest(app,event)
         end
 
         % Button pushed function: ReviewUsButton
@@ -178,7 +186,7 @@ classdef ProjectStartupApp < matlab.apps.AppBase
 
         % Button pushed function: READMEButton
         function READMEButtonPushed(app, event)
-            UIFigureCloseRequest(app,event)
+            StartUpAppUIFigureCloseRequest(app,event)
         end
     end
 
@@ -188,16 +196,16 @@ classdef ProjectStartupApp < matlab.apps.AppBase
         % Create UIFigure and components
         function createComponents(app)
 
-            % Create UIFigure and hide until all components are created
-            app.UIFigure = uifigure('Visible', 'off');
-            app.UIFigure.AutoResizeChildren = 'off';
-            app.UIFigure.Position = [100 100 276 430];
-            app.UIFigure.Name = 'MATLAB App';
-            app.UIFigure.Resize = 'off';
-            app.UIFigure.CloseRequestFcn = createCallbackFcn(app, @UIFigureCloseRequest, true);
+            % Create StartUpAppUIFigure and hide until all components are created
+            app.StartUpAppUIFigure = uifigure('Visible', 'off');
+            app.StartUpAppUIFigure.AutoResizeChildren = 'off';
+            app.StartUpAppUIFigure.Position = [100 100 276 430];
+            app.StartUpAppUIFigure.Name = 'StartUp App';
+            app.StartUpAppUIFigure.Resize = 'off';
+            app.StartUpAppUIFigure.CloseRequestFcn = createCallbackFcn(app, @StartUpAppUIFigureCloseRequest, true);
 
             % Create TabGroup
-            app.TabGroup = uitabgroup(app.UIFigure);
+            app.TabGroup = uitabgroup(app.StartUpAppUIFigure);
             app.TabGroup.AutoResizeChildren = 'off';
             app.TabGroup.Position = [1 1 276 460];
 
@@ -299,7 +307,7 @@ classdef ProjectStartupApp < matlab.apps.AppBase
             app.OtherButton.Text = 'Other';
 
             % Show the figure after all components are created
-            app.UIFigure.Visible = 'on';
+            app.StartUpAppUIFigure.Visible = 'on';
         end
     end
 
@@ -313,7 +321,7 @@ classdef ProjectStartupApp < matlab.apps.AppBase
             createComponents(app)
 
             % Register the app with App Designer
-            registerApp(app, app.UIFigure)
+            registerApp(app, app.StartUpAppUIFigure)
 
             % Execute the startup function
             runStartupFcn(app, @startupFcn)
@@ -327,7 +335,7 @@ classdef ProjectStartupApp < matlab.apps.AppBase
         function delete(app)
 
             % Delete UIFigure when app is deleted
-            delete(app.UIFigure)
+            delete(app.StartUpAppUIFigure)
         end
     end
 end
