@@ -48,7 +48,7 @@ Ensure you have all the required products (listed below) installed. If you need 
 
 ## Products
 
- *MATLAB* is used throughout. Tools from *Simulink®, Simscape, Simscape Electrical™, and DSP System Toolbox™* are used frequently as well. *Symbolic Math Toolbox™* is used as well for the [!syms](https://www.mathworks.com/help/symbolic/syms.html) function.
+ *MATLAB* is used throughout. Tools from *Simulink®, Simscape, Simscape Electrical™, and DSP System Toolbox™* are used frequently as well. *Symbolic Math Toolbox™* is used as well for the [syms](https://www.mathworks.com/help/symbolic/syms.html) function and *Control System Toolbox™* is used for the [tf](https://www.mathworks.com/help/releases/R2024b/control/ref/tf.html?overload=tf+false) function.
 
 
 # Scripts
