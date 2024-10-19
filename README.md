@@ -48,7 +48,7 @@ Ensure you have all the required products (listed below) installed. If you need 
 
 ## Products
 
- *MATLAB* is used throughout. Tools from *Simulink®, Simscape, Simscape Electrical™, and DSP System Toolbox*™ are used frequently as well.
+ *MATLAB* is used throughout. Tools from *Simulink®, Simscape, Simscape Electrical™, and DSP System Toolbox™* are used frequently as well. *Symbolic Math Toolbox™* is used as well for the [!syms](https://www.mathworks.com/help/symbolic/syms.html) function.
 
 
 # Scripts
