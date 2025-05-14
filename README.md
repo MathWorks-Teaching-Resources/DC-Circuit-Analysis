@@ -101,9 +101,9 @@ Ensure you have all the required products (listed below) installed. If you need 
 
 These short videos demonstrate some of the basic techniques used to simulate and measure circuits in the module.
 
--  [Building a Circuit](https://github.com/MathWorks-Teaching-Resources/DC-Circuit-Analysis#building-a-circuit) 
--  [Analyzing with a Multimeter](https://github.com/MathWorks-Teaching-Resources/DC-Circuit-Analysis#analyzing-with-a-multimeter) 
--  [Demonstrating Oscilloscope Operation](https://github.com/MathWorks-Teaching-Resources/DC-Circuit-Analysis#demonstrating-oscilloscope-operation) 
+-  [Building a Circuit](https://github.com/user-attachments/assets/7b9aac4d-d9da-4ea0-9307-364677ec949e) 
+-  [Analyzing with a Multimeter](https://github.com/user-attachments/assets/951be997-b782-439a-ae3b-6baf9e4e5ff5) 
+-  [Demonstrating Oscilloscope Operation](https://github.com/user-attachments/assets/336a0e0f-1d50-460a-9c10-6a856c456549) 
 
 # License
 
