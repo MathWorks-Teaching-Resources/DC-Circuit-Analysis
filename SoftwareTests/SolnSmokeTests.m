@@ -55,7 +55,7 @@ classdef SolnSmokeTests < matlab.unittest.TestCase
             % Check that solutions are on path:
             testCase.isSolnOnPath = isfolder("Solutions");
             if testCase.isSolnOnPath == 0
-                addpath(fullfile(testCase.RootFolder,"InstructorResources","Solutions"))
+                addpath(genpath(fullfile(testCase.RootFolder,"InstructorResources","Solutions")))
             end
 
             % Close the StartUp app if still open:
@@ -68,66 +68,66 @@ classdef SolnSmokeTests < matlab.unittest.TestCase
 
     end % methods (TestClassSetup)
 
-    % methods(Test)
-    % 
-    %     % Check that solutions files exist for each of the student
-    %     % templates
-    %     function ExistSolns(testCase,File)
-    %         SolutionName = replace(string(File),".mlx","Soln.mlx");
-    %         assert(exist(SolutionName,"file"),"Missing solutions for "+File);
-    %     end
-    % 
-    % 
-    %     function SmokeRun(testCase,File)
-    % 
-    %         % Navigate to project root folder:
-    %         cd(testCase.RootFolder)
-    %         FileToRun = replace(string(File),".mlx","Soln.mlx");
-    % 
-    %         % Pre-test:
-    %         PreFiles = CheckPreFile(testCase,FileToRun);
-    %         run(PreFiles);
-    % 
-    %         % Run SmokeTest
-    %         disp(">> Running " + FileToRun);
-    %         try
-    %             run(fullfile("InstructorResources","Solutions",FileToRun));
-    %         catch ME
-    % 
-    %         end
-    % 
-    %         % Post-test:
-    %         PostFiles = CheckPostFile(testCase,FileToRun);
-    %         run(PostFiles)
-    % 
-    %         % Log every figure created during run:
-    %         Figures = findall(groot,'Type','figure');
-    %         Figures = flipud(Figures);
-    %         if ~isempty(Figures)
-    %             for f = 1:size(Figures,1)
-    %                 if ~isempty(Figures(f).Number)
-    %                     FigDiag = matlab.unittest.diagnostics.FigureDiagnostic(Figures(f),'Formats','png');
-    %                     log(testCase,1,FigDiag);
-    %                 end
-    %             end
-    %         end
-    % 
-    %         % Close all figures and Simulink models
-    %         close all force
-    %         if any(matlab.addons.installedAddons().Name == "Simulink")
-    %             bdclose all
-    %         end
-    % 
-    %         % Rethrow error if any
-    %         if exist("ME","var")
-    %             if ~any(strcmp(ME.identifier,KnownIssuesID))
-    %                 rethrow(ME)
-    %             end
-    %         end
-    % 
-    %     end
-    % 
-    % end % Test Methods
+    methods(Test)
+
+        % Check that solutions files exist for each of the student
+        % templates
+        function ExistSolns(testCase,File)
+            SolutionName = replace(string(File),".mlx","Soln.mlx");
+            assert(exist(SolutionName,"file"),"Missing solutions for "+File);
+        end
+
+
+        function SmokeRun(testCase,File)
+
+            % Navigate to project root folder:
+            cd(testCase.RootFolder)
+            FileToRun = replace(string(File),".mlx","Soln.mlx");
+
+            % Pre-test:
+            PreFiles = CheckPreFile(testCase,FileToRun);
+            run(PreFiles);
+
+            % Run SmokeTest
+            disp(">> Running " + FileToRun);
+            try
+                run(fullfile("InstructorResources","Solutions",FileToRun));
+            catch ME
+
+            end
+
+            % Post-test:
+            PostFiles = CheckPostFile(testCase,FileToRun);
+            run(PostFiles)
+
+            % Log every figure created during run:
+            Figures = findall(groot,'Type','figure');
+            Figures = flipud(Figures);
+            if ~isempty(Figures)
+                for f = 1:size(Figures,1)
+                    if ~isempty(Figures(f).Number)
+                        FigDiag = matlab.unittest.diagnostics.FigureDiagnostic(Figures(f),'Formats','png');
+                        log(testCase,1,FigDiag);
+                    end
+                end
+            end
+
+            % Close all figures and Simulink models
+            close all force
+            if any(matlab.addons.installedAddons().Name == "Simulink")
+                bdclose all
+            end
+
+            % Rethrow error if any
+            if exist("ME","var")
+                if ~any(strcmp(ME.identifier,KnownIssuesID))
+                    rethrow(ME)
+                end
+            end
+
+        end
+
+    end % Test Methods
 
     methods (Access = private)
 
@@ -162,5 +162,15 @@ classdef SolnSmokeTests < matlab.unittest.TestCase
         end
 
     end % Private Access Methods
+
+    methods (TestClassTeardown)
+
+        function ResetPath(testCase)
+            if ~testCase.isSolnOnPath && exist("Solutions","dir")
+                rmpath(genpath(fullfile(currentProject().RootFolder,"InstructorResources","Solutions")))
+            end
+        end
+
+    end % TestClassTeardown
 
 end % SolnSmokeTests
