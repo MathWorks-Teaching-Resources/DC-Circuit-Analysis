@@ -54,42 +54,42 @@ Ensure you have all the required products (listed below) installed. If you need 
 # Scripts
 
 
-## [**MeshAnalysis.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=MeshAnalysis.mlx)
+## [**MeshAnalysis.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/MeshAnalysis.mlx)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
 | <img src="Images/image_3.png" width="171" alt="image_3.png"> <br>  | • Use mesh analysis to compute currents through a linear circuit. <br> • Solve the matrix form of circuit equations in MATLAB. <br> • Model and analyze linear circuits in Simscape. <br>  | • Electrical Engineering <br>   |
 |      |      |       |
 
-## [**NodalAnalysis.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=NodalAnalysis.mlx)
+## [**NodalAnalysis.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/NodalAnalysis.mlx)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
 | <img src="Images/image_4.png" width="171" alt="image_4.png"> <br>  | • Use nodal analysis to compute voltages. <br> • Solve the matrix form of circuit equations in MATLAB. <br> • Model and analyze linear circuits in Simscape. <br>  | • Electrical Engineering <br>   |
 |      |      |       |
 
-## [**TheveninNorton.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=TheveninNorton.mlx)
+## [**TheveninNorton.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/TheveninNorton.mlx)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
 | <img src="Images/image_5.png" width="171" alt="image_5.png"> <br>  | • Explain Thevenin and Norton equivalent circuits. <br> • Solve for Thevenin and Norton equivalents. <br> • Compare circuits to their Thevenin and Norton equivalents. <br>  | • Electrical Engineering <br>   |
 |      |      |       |
 
-## [**RCCircuits.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=RCCircuits.mlx)
+## [**RCCircuits.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/RCCircuits.mlx)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
 | <img src="Images/image_6.png" width="171" alt="image_6.png"> <br>  | • Simulate charging and discharging RC circuits. <br> • Plot solutions of RC circuit differential equations. <br> • Measure the time constant of an RC circuit. <br>  | • Electrical Engineering <br>   |
 |      |      |       |
 
-## [**RLCCircuits.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=RLCCircuits.mlx)
+## [**RLCCircuits.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/RLCCircuits.mlx)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
 | <img src="Images/image_7.png" width="171" alt="image_7.png"> <br>  | • Compare the response of first and second order circuits. <br> • Analyze a second order RLC circuit differential equation. <br> • Solve for the natural frequency and damping in an RLC circuit. <br> • Compare underdamped, overdamped, and critically damped circuits. <br>  | • Electrical Engineering <br>   |
 |      |      |       |
 
-## [**OpAmps.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=OpAmps.mlx)
+## [**OpAmps.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/OpAmps.mlx)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
