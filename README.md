@@ -2,7 +2,7 @@
 # <span style="color:rgb(213,80,0)">DC Circuit Analysis</span>
 
 
-[![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/103375-dc-circuit-analysis) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=README.mlx)
+[![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/103375-dc-circuit-analysis) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=README.m)
 
 [![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https://mathworks-teaching-resources.github.io/DC-Circuit-Analysis/TestedWith.json)](https://MathWorks-Teaching-Resources.github.io/DC-Circuit-Analysis)
 
@@ -17,7 +17,7 @@ This curriculum module contains interactive [MATLAB® live scripts](https://www.
 
 ## Background
 
-You can use these live scripts as demonstrations in lectures, class activities, or interactive assignments outside class. DC Circuit Analysis covers topics such as mesh analysis, nodal analysis, thevenin circuits, RL circuits, RLC circuits, and op amps. It also includes an application of a virtual oscilloscope to perform measurements of the variety of DC circuits.
+You can use these live scripts as demonstrations in lectures, class activities, or interactive assignments outside class. DC Circuit Analysis covers topics such as mesh analysis, nodal analysis, Thevenin circuits, RL circuits, RLC circuits, and op amps. It also includes an application of a virtual oscilloscope to perform measurements of the variety of DC circuits.
 
 
 The instructions inside the live scripts will guide you through the exercises and activities. Get started with each live script by running it one section at a time. To stop running the script or a section midway (for example, when an animation is in progress), use the <img src="Images/image_0.png" width="19" alt="image_0.png"> Stop button in the **RUN** section of the **Live Editor** tab in the MATLAB Toolstrip.
@@ -29,10 +29,13 @@ Contact the [MathWorks Educator Content Development Team](mailto:onlineteaching@
 
 ## Prerequisites
 
-This module assumes knowledge of basic ciruit theory and standard electrical circuit notation. There is minimal MATLAB and Simscape knowledge required for these scripts, but you could use [MATLAB Onramp](https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted) and [Circuit Simulation Onramp](https://matlabacademy.mathworks.com/details/circuit-simulation-onramp/circuits) as a resource to acquire familiarity with MATLAB syntax, live scripts, and models.
+This module assumes knowledge of basic circuit theory and standard electrical circuit notation. There is minimal MATLAB and Simscape knowledge required for these scripts, but you could use [MATLAB Onramp](https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted) and [Circuit Simulation Onramp](https://matlabacademy.mathworks.com/details/circuit-simulation-onramp/circuits) as a resource to acquire familiarity with MATLAB syntax, live scripts, and models.
 
 
 ## Getting Started
+
+If you intend to work on this courseware with MATLAB R2024b or older, you will have a better viewing experience by downloading it from the [legacy GitHub release](https://github.com/MathWorks-Teaching-Resources/DC-Circuit-Analysis/releases/tag/mlx).
+
 ### Accessing the Module
 ### **On MATLAB Online:**
 
@@ -54,42 +57,42 @@ Ensure you have all the required products (listed below) installed. If you need 
 # Scripts
 
 
-## [**MeshAnalysis.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/MeshAnalysis.mlx)
+## [**MeshAnalysis.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/MeshAnalysis.m)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
 | <img src="Images/image_3.png" width="171" alt="image_3.png"> <br>  | • Use mesh analysis to compute currents through a linear circuit. <br> • Solve the matrix form of circuit equations in MATLAB. <br> • Model and analyze linear circuits in Simscape. <br>  | • Electrical Engineering <br>   |
 |      |      |       |
 
-## [**NodalAnalysis.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/NodalAnalysis.mlx)
+## [**NodalAnalysis.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/NodalAnalysis.m)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
 | <img src="Images/image_4.png" width="171" alt="image_4.png"> <br>  | • Use nodal analysis to compute voltages. <br> • Solve the matrix form of circuit equations in MATLAB. <br> • Model and analyze linear circuits in Simscape. <br>  | • Electrical Engineering <br>   |
 |      |      |       |
 
-## [**TheveninNorton.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/TheveninNorton.mlx)
+## [**TheveninNorton.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/TheveninNorton.m)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
 | <img src="Images/image_5.png" width="171" alt="image_5.png"> <br>  | • Explain Thevenin and Norton equivalent circuits. <br> • Solve for Thevenin and Norton equivalents. <br> • Compare circuits to their Thevenin and Norton equivalents. <br>  | • Electrical Engineering <br>   |
 |      |      |       |
 
-## [**RCCircuits.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/RCCircuits.mlx)
+## [**RCCircuits.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/RCCircuits.m)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
 | <img src="Images/image_6.png" width="171" alt="image_6.png"> <br>  | • Simulate charging and discharging RC circuits. <br> • Plot solutions of RC circuit differential equations. <br> • Measure the time constant of an RC circuit. <br>  | • Electrical Engineering <br>   |
 |      |      |       |
 
-## [**RLCCircuits.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/RLCCircuits.mlx)
+## [**RLCCircuits.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/RLCCircuits.m)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |
 | <img src="Images/image_7.png" width="171" alt="image_7.png"> <br>  | • Compare the response of first and second order circuits. <br> • Analyze a second order RLC circuit differential equation. <br> • Solve for the natural frequency and damping in an RLC circuit. <br> • Compare underdamped, overdamped, and critically damped circuits. <br>  | • Electrical Engineering <br>   |
 |      |      |       |
 
-## [**OpAmps.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/OpAmps.mlx)
+## [**OpAmps.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/DC-Circuit-Analysis&project=DCCircuitAnalysis.prj&file=Scripts/OpAmps.m)
 |      |      |      |
 | :-- | :-- | :-- |
 |  | **In this script, students will...** <br>  | **Academic disciplines** <br>   |

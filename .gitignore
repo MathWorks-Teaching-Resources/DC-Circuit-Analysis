@@ -4,6 +4,7 @@
 *.asv
 *.m~
 *.autosave
+*.bak_*
 *.slx.r*
 *.mdl.r*
 

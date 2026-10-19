@@ -3,6 +3,12 @@ classdef ProjectStartupApp < matlab.apps.AppBase
     % Properties that correspond to app components
     properties (Access = public)
         StartUpAppUIFigure  matlab.ui.Figure
+        VersionWarningPanel  matlab.ui.container.Panel
+        VersionWarningGrid   matlab.ui.container.GridLayout
+        VersionWarningTitle  matlab.ui.control.Label
+        VersionWarningText   matlab.ui.control.Label
+        VersionWarningButton matlab.ui.control.Button
+        VersionContinueButton matlab.ui.control.Button
         FeedBackPanel       matlab.ui.container.Panel
         FeedBackGrid        matlab.ui.container.GridLayout
         ReviewTitle         matlab.ui.control.Label
@@ -25,6 +31,7 @@ classdef ProjectStartupApp < matlab.apps.AppBase
         GitHubOrganization = "MathWorks-Teaching-Resources"; % Description
         GitHubRepository = "DC-Circuit-Analysis";
         ImagePath {mustBeFile} = fullfile("Images","image_11.png"); 
+        LegacyMlxReleaseUrl = "https://github.com/MathWorks-Teaching-Resources/DC-Circuit-Analysis/releases/tag/mlx";
     end
 
     properties (Access = private)
@@ -33,6 +40,18 @@ classdef ProjectStartupApp < matlab.apps.AppBase
     end
 
     methods (Access = private, Static)
+
+        function tf = isMatlabOlderThanR2025a()
+            release = string(version("-release"));
+            token = regexp(release, "^(\d{4})([ab])$", "tokens", "once");
+            if isempty(token)
+                tf = isMATLABReleaseOlderThan("R2025a");
+            else
+                year = str2double(token{1});
+                half = token{2};
+                tf = year < 2025 || (year == 2025 && half < "a");
+            end
+        end
 
         function saveSettings(isReviewed,numLoad)
             try
@@ -66,7 +85,9 @@ classdef ProjectStartupApp < matlab.apps.AppBase
             end
 
             % Select tab to display
-            if ~isReviewed && numLoad > 2
+            if ProjectStartupApp.isMatlabOlderThanR2025a()
+                app.VersionWarningGrid.Parent = app.StartUpAppUIFigure;
+            elseif ~isReviewed && numLoad > 2
                 isReviewed = true;
                 app.FeedBackGrid.Parent = app.StartUpAppUIFigure; 
             else
@@ -81,16 +102,23 @@ classdef ProjectStartupApp < matlab.apps.AppBase
 
         % Close request function: StartUpAppUIFigure
         function StartUpAppUIFigureCloseRequest(app, event)
-            if event.Source == app.READMEButton
-                open README.mlx
+            if event.Source == app.VersionWarningButton
+                web(app.LegacyMlxReleaseUrl, "-browser")
+                return
+            elseif event.Source == app.VersionContinueButton
+                app.VersionWarningGrid.Parent = app.VersionWarningPanel;
+                app.WelcomeGrid.Parent = app.StartUpAppUIFigure;
+                return
+            elseif event.Source == app.READMEButton
+                open README.m
             elseif event.Source == app.MainMenuButton
-                open MainMenu.mlx
+                open MainMenu.m
             elseif event.Source == app.FacultyButton
-                open MainMenu.mlx            
+                open MainMenu.m            
             elseif event.Source == app.StudentButton
-                open MainMenu.mlx
+                open MainMenu.m
             elseif event.Source == app.OtherButton
-                open MainMenu.mlx
+                open MainMenu.m
             else
                 disp("Thank you for your time.")
             end
@@ -148,13 +176,23 @@ classdef ProjectStartupApp < matlab.apps.AppBase
         end
 
         % Button pushed function: ReviewUsButton
-        function ReviewUsButtonPushed(app, event)
+        function ReviewUsButtonPushed(app, ~)
             app.WelcomeGrid.Parent = app.WelcomePanel;
             app.FeedBackGrid.Parent = app.StartUpAppUIFigure;
         end
 
         % Button pushed function: READMEButton
         function READMEButtonPushed(app, event)
+            StartUpAppUIFigureCloseRequest(app,event)
+        end
+
+        % Button pushed function: VersionWarningButton
+        function VersionWarningButtonPushed(app, event)
+            StartUpAppUIFigureCloseRequest(app,event)
+        end
+
+        % Button pushed function: VersionContinueButton
+        function VersionContinueButtonPushed(app, event)
             StartUpAppUIFigureCloseRequest(app,event)
         end
     end
@@ -171,6 +209,52 @@ classdef ProjectStartupApp < matlab.apps.AppBase
             app.StartUpAppUIFigure.Position = [100 100 276 430];
             app.StartUpAppUIFigure.Name = 'StartUp App';
             app.StartUpAppUIFigure.CloseRequestFcn = createCallbackFcn(app, @StartUpAppUIFigureCloseRequest, true);
+
+            % Create VersionWarningPanel
+            app.VersionWarningPanel = uipanel(app.StartUpAppUIFigure);
+            app.VersionWarningPanel.AutoResizeChildren = 'off';
+            app.VersionWarningPanel.Position = [-811 33 244 410];
+
+            % Create VersionWarningGrid
+            app.VersionWarningGrid = uigridlayout(app.VersionWarningPanel);
+            app.VersionWarningGrid.ColumnWidth = {'1x', '8x', '1x'};
+            app.VersionWarningGrid.RowHeight = {'2x', '5x', '1x', '1x'};
+
+            % Create VersionWarningTitle
+            app.VersionWarningTitle = uilabel(app.VersionWarningGrid);
+            app.VersionWarningTitle.HorizontalAlignment = 'center';
+            app.VersionWarningTitle.VerticalAlignment = 'top';
+            app.VersionWarningTitle.WordWrap = 'on';
+            app.VersionWarningTitle.FontSize = 22;
+            app.VersionWarningTitle.FontWeight = 'bold';
+            app.VersionWarningTitle.Layout.Row = 1;
+            app.VersionWarningTitle.Layout.Column = [1 3];
+            app.VersionWarningTitle.Text = 'Using MATLAB R2024b or older?';
+
+            % Create VersionWarningText
+            app.VersionWarningText = uilabel(app.VersionWarningGrid);
+            app.VersionWarningText.HorizontalAlignment = 'center';
+            app.VersionWarningText.WordWrap = 'on';
+            app.VersionWarningText.FontSize = 14;
+            app.VersionWarningText.Layout.Row = 2;
+            app.VersionWarningText.Layout.Column = [1 3];
+            app.VersionWarningText.Text = 'For a better viewing experience in MATLAB R2024b or older, download this courseware from the legacy GitHub release.';
+
+            % Create VersionWarningButton
+            app.VersionWarningButton = uibutton(app.VersionWarningGrid, 'push');
+            app.VersionWarningButton.ButtonPushedFcn = createCallbackFcn(app, @VersionWarningButtonPushed, true);
+            app.VersionWarningButton.FontSize = 16;
+            app.VersionWarningButton.Layout.Row = 3;
+            app.VersionWarningButton.Layout.Column = 2;
+            app.VersionWarningButton.Text = 'Open Legacy Release';
+
+            % Create VersionContinueButton
+            app.VersionContinueButton = uibutton(app.VersionWarningGrid, 'push');
+            app.VersionContinueButton.ButtonPushedFcn = createCallbackFcn(app, @VersionContinueButtonPushed, true);
+            app.VersionContinueButton.FontSize = 16;
+            app.VersionContinueButton.Layout.Row = 4;
+            app.VersionContinueButton.Layout.Column = 2;
+            app.VersionContinueButton.Text = 'Continue';
 
             % Create WelcomePanel
             app.WelcomePanel = uipanel(app.StartUpAppUIFigure);
