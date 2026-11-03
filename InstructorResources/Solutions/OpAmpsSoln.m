@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_0CC94808] # Operational Amplifiers
-%[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%[text] [⇦ DC Circuit Analysis Main Menu](file:../../MainMenu.m)
 %[text] **Learning Goals**
 %[text] - Describe the open-loop behavior of an op amp.
 %[text] - Compare ideal and non-ideal op amp behavior.
@@ -80,7 +80,10 @@
 %[text]{"align":"center"} [![](text:image:8bb7)](<matlab: OpAmpCircuits>)
 %[text]{"align":"center"} [`OpAmpCircuits.slx`](<matlab: OpAmpCircuits>)
 %[text] 
-%[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%[text] [⇦ DC Circuit Analysis Main Menu](file:../../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

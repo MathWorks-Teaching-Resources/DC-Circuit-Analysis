@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_6A95D682] # Nodal Analysis Lab
-%[text] [⇦ DC Circuit Analysis Overview](<matlab: OpenOverview>)
+%[text] [⇦ DC Circuit Analysis Overview](file:../../MainMenu.m)
 %[text:tableOfContents]{"heading":"**Table of Contents**"}
 %[text] In this lab, you will perform a nodal analysis of the linear circuit shown below in MATLAB. Afterward, you will build the circuit in Simscape and take voltage measurements to verify your result. Before completing this assignment, consider reviewing [NodalAnalysis.m](<matlab:open(fullfile(currentProject().RootFolder,'Scripts','NodalAnalysis.m'))>).
 %[text]{"align":"center"} ![nodal\_labcircuit.png](text:image:580c)
@@ -51,7 +51,10 @@ VA = VB + Is1*Req2
 %[text] **Task 8.** Complete the model by connecting the circuit elements to match the circuit diagram defined in the previous section.
 %[text] **Task 9.** Use the multimeter to measure each of the node voltages. For detailed instructions on how to use the virtual multimeter to measure voltage, see the instructions in the last part of [NodalAnalysis.m](<matlab:open(fullfile(currentProject().RootFolder,'Scripts','NodalAnalysis.m'))>).
 %[text] 
-%[text] [⇦ DC Circuit Analysis Overview](<matlab: OpenOverview>)
+%[text] [⇦ DC Circuit Analysis Overview](file:../../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

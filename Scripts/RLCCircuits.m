@@ -171,6 +171,9 @@ axis([0 0.001 -10 25])
 %[text] - Are there any oscillations present? \
 %[text] 
 %[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

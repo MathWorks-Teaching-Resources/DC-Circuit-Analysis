@@ -33,6 +33,9 @@
 %[text] **Note:** Watch [this 2-minute instructional video](https://user-images.githubusercontent.com/81383420/145589989-f7ae4a32-cab3-405d-b7e8-476e34d697b5.mp4) to learn how to use the virtual multimeter.
 %[text] 
 %[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

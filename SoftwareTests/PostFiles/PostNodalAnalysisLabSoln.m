@@ -1,3 +1,3 @@
-%  Post-run script for NodalAnalysisLabSoln.mlx
+%  Post-run script for NodalAnalysisLabSoln.m
 % ---- Post-run commands -----
- 
+% <matlab:ShareFeedback Share your feedback>

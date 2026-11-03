@@ -1,3 +1,3 @@
-%  Post-run script for OpAmps.mlx
+%  Post-run script for OpAmps.m
 % ---- Post-run commands -----
- 
+% <matlab:ShareFeedback Share your feedback>

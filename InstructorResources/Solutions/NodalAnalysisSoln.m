@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_0A8C11C8] # Nodal Analysis
-%[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%[text] [⇦ DC Circuit Analysis Main Menu](file:../../MainMenu.m)
 %[text] **Learning Goals**
 %[text] - Use nodal analysis to compute voltages.
 %[text] - Solve the matrix form of circuit equations in MATLAB.
@@ -104,7 +104,10 @@ V = M\b
 %[text]{"align":"center"} *Simscape model measuring the node voltage* $V\_B${"altText":"V\_B"}
 %[text] 3\. Repeat step 2 to measure the node voltage at A and C. Do the measurements match the result of the nodal analysis?
 %[text] 
-%[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%[text] [⇦ DC Circuit Analysis Main Menu](file:../../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

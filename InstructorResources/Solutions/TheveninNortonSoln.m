@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_0A8C11C8] # Thevenin and Norton Equivalent Circuits
-%[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%[text] [⇦ DC Circuit Analysis Main Menu](file:../../MainMenu.m)
 %[text] **Learning Goals**
 %[text] - Explain Thevenin and Norton equivalent circuits.
 %[text] - Solve for Thevenin and Norton equivalents.
@@ -96,7 +96,10 @@ Inort = I(3) % The third mesh current is the Norton equivalent current
 %[text] Implying the final Norton equivalent:
 %[text]{"align":"center"} ![ex2\_soln.png](text:image:3fb7)
 %[text] 
-%[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%[text] [⇦ DC Circuit Analysis Main Menu](file:../../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

@@ -76,7 +76,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        Releases: [R2025b, R2026a]
+        Releases: [R2026a, R2026b]
     runs-on: ubuntu-latest
     env:
       MATLAB_PRODUCTS: MATLAB Simulink Simscape DSP_System_Toolbox Simscape_Electrical Symbolic_Math_Toolbox Control_System_Toolbox

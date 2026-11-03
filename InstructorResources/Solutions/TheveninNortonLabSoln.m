@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_6A95D682] # Thevenin and Norton Equivalents Lab
-%[text] [⇦ DC Circuit Analysis Overview](<matlab: OpenOverview>)
+%[text] [⇦ DC Circuit Analysis Overview](file:../../MainMenu.m)
 %[text:tableOfContents]{"heading":"**Table of Contents**"}
 %[text] In this lab, you will derive Thevenin and Norton equivalents by hand and using Simscape. 
 %[text]{"align":"center"} ![TheveninNortonLab.png](text:image:8e2c)
@@ -66,7 +66,10 @@ VthevCD = -0.4*38.34
 %[text] What is the current through the load resistor in amps (record your answer below)? Does it match the measurement in the circuit in part 3?
 IloadCD_thevenin = -15.336/(15 + 38.34)
 %[text] 
-%[text] [⇦ DC Circuit Analysis Overview](<matlab: OpenOverview>)
+%[text] [⇦ DC Circuit Analysis Overview](file:../../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

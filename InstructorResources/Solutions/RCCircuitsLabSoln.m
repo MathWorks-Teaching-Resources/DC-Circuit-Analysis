@@ -1,5 +1,5 @@
 %[text] %[text:anchor:H_6DAE4C68] # RC Circuits Lab
-%[text] [⇦ DC Circuit Analysis Overview](<matlab: OpenOverview>)
+%[text] [⇦ DC Circuit Analysis Overview](file:../../MainMenu.m)
 %[text:tableOfContents]{"heading":"**Table of Contents**"}
 %%
 %[text] %[text:anchor:H_0B83907B] ## **Part 1. Construct and simulate an RC circuit**
@@ -51,7 +51,10 @@
 %[text] **Task 9.** Use the cursors to measure the time constant of the circuit, $\\tau${"altText":"\tau"}. For instructions on how to measure the time constant, review the last part of [RCCircuits.m](<matlab:open(fullfile(currentProject().RootFolder,'Scripts','RCCircuits.m'))>). Record your answer below in $\\mu \\text{s}${"altText":"\mu \text{s}"}.
 tau = 1.01; % In microseconds
 %[text] 
-%[text] [⇦ DC Circuit Analysis Overview](<matlab: OpenOverview>)
+%[text] [⇦ DC Circuit Analysis Overview](file:../../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

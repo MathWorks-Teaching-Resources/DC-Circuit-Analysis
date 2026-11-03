@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_6A95D682] # Mesh Analysis Lab
-%[text] [⇦ DC Circuit Analysis Overview](<matlab: OpenOverview>)
+%[text] [⇦ DC Circuit Analysis Overview](file:../../MainMenu.m)
 %[text:tableOfContents]{"heading":"**Table of Contents**"}
 %[text] In this lab, you will perform a mesh analysis of the linear circuit shown below in MATLAB. Afterward, you will build the circuit in Simscape and take current measurements to verify your result. Before completing this assignment, consider reviewing [MeshAnalysis.m](<matlab:open(fullfile(currentProject().RootFolder,'Scripts','MeshAnalysis.m'))>).
 %[text]{"align":"center"} ![circuit2.png](text:image:7865)
@@ -50,7 +50,10 @@ I = A\b
 %[text]{"align":"center"} ![circuit2\_signs.png](text:image:8730)
 %[text] **Task 8.** Use the multimeter to measure each of the mesh currents. For detailed instructions on using the virtual multimeter to measure currents, see the instructions in the last part of [MeshAnalysis.m](<matlab:open(fullfile(currentProject().RootFolder,'Scripts','MeshAnalysis.m'))>).
 %[text] 
-%[text] [⇦ DC Circuit Analysis Overview](<matlab: OpenOverview>)
+%[text] [⇦ DC Circuit Analysis Overview](file:../../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

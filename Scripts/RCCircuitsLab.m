@@ -53,6 +53,9 @@
 tau = NaN; % In microseconds
 %[text] 
 %[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

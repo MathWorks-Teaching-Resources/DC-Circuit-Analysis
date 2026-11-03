@@ -1,5 +1,5 @@
 %[text] %[text:anchor:H_6DAE4C68] # RLC Circuits
-%[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%[text] [⇦ DC Circuit Analysis Main Menu](file:../../MainMenu.m)
 %[text] **Learning Goals**
 %[text] - Compare the response of first and second order circuits.
 %[text] - Analyze a second order RLC circuit differential equation.
@@ -170,7 +170,10 @@ axis([0 0.001 -10 25])
 %[text] - How does the underdamped response compare to the overdamped response you measured in the previous activity?
 %[text] - Are there any oscillations present? \
 %[text] 
-%[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%[text] [⇦ DC Circuit Analysis Main Menu](file:../../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

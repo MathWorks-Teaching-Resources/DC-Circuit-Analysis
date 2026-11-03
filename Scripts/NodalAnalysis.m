@@ -105,6 +105,9 @@ V = M\b
 %[text] 3\. Repeat step 2 to measure the node voltage at A and C. Do the measurements match the result of the nodal analysis?
 %[text] 
 %[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

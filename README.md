@@ -8,7 +8,7 @@
 
 **Curriculum Module**
 
-_Created with R2024b. Compatible with R2024b and later releases._
+_Created with R2024b. The current plain-text live scripts require R2025a or later._
 
 # Information
 
@@ -124,6 +124,6 @@ Feel free to explore our other [modular courseware content](https://www.mathwork
 Looking for more? Find an issue? Have a suggestion? Please contact the [MathWorks Educator Content Development Team](mailto:onlineteaching@mathworks.com). If you want to contribute directly to this project, you can find information about how to do so in the [CONTRIBUTING.md](https://github.com/MathWorks-Teaching-Resources/DC-Circuit-Analysis/blob/release/CONTRIBUTING.md) page on GitHub.
 
 
- *©* Copyright 2025 The MathWorks, Inc
+ *©* Copyright 2025-2026 The MathWorks, Inc
 
 

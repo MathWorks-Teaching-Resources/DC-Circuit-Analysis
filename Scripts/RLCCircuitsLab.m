@@ -55,6 +55,9 @@ R_task9 = NaN
 %[text] **Task 10.** Test the circuit using the virtual oscilloscope with the value of $R${"altText":"R"} you identified in **Task 9.** Does the response appear overdamped?
 %[text] 
 %[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

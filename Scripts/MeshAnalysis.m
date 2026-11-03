@@ -94,6 +94,9 @@ I = A\b
 %[text] 5\. Repeat steps 2-4 to measure the mesh currents $I\_1${"altText":"I\_1"} and $I\_2${"altText":"I\_2"}. If correct, you should find $I\_1 = 3.46${"altText":"I\_1 = 3.46"} mA and $I\_2 = 168${"altText":"I\_2 = 168"} mA, the currents calculated in the mesh analysis.
 %[text] 
 %[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

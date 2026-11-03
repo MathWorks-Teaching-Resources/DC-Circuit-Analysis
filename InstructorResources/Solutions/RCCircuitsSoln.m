@@ -1,5 +1,5 @@
 %[text] %[text:anchor:H_6DAE4C68] # RC Circuits
-%[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%[text] [⇦ DC Circuit Analysis Main Menu](file:../../MainMenu.m)
 %[text] **Learning Goals**
 %[text] - Simulate charging and discharging RC circuits.
 %[text] - Plot solutions of RC circuit differential equations.
@@ -92,7 +92,10 @@ grid on
 %[text]{"align":"center"} [![](text:image:4805)](<matlab: RCCircuitTau>)
 %[text]{"align":"center"} [`RCCircuitTau.slx`](<matlab: RCCircuitTau>)
 %[text] 
-%[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%[text] [⇦ DC Circuit Analysis Main Menu](file:../../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

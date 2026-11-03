@@ -81,8 +81,11 @@
 %[text] %[text:anchor:H_0FA5DA18] ## Contribute 
 %[text] Looking for more? Find an issue? Have a suggestion? Please contact the [MathWorks Educator Content Development Team](mailto:onlineteaching@mathworks.com). If you want to contribute directly to this project, you can find information about how to do so in the [CONTRIBUTING.md](https://github.com/MathWorks-Teaching-Resources/DC-Circuit-Analysis/blob/release/CONTRIBUTING.md) page on GitHub.
 %[text] 
-%[text] © Copyright 2025 The MathWorks, Inc
-%[text] 
+%[text] © Copyright 2025-2026 The MathWorks, Inc
+%[text]
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

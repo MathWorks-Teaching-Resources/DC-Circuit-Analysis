@@ -97,6 +97,9 @@ Inort = I(3) % The third mesh current is the Norton equivalent current
 %[text]{"align":"center"} ![ex2\_soln.png](text:image:6fc0)
 %[text] 
 %[text] [⇦ DC Circuit Analysis Main Menu](file:../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---

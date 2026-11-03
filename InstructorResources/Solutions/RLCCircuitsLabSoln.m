@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_89C495FF] # RLC Circuits Lab
-%[text] [⇦ DC Circuit Analysis Overview](<matlab: OpenOverview>)
+%[text] [⇦ DC Circuit Analysis Overview](file:../../MainMenu.m)
 %[text:tableOfContents]{"heading":"**Table of Contents**"}
 %%
 %[text] %[text:anchor:H_9E1B6A58] ## Introduction
@@ -55,7 +55,10 @@ R_task7 = 1/(2*1)*sqrt(L/C)
 R_task9 = 1/(2*3)*sqrt(L/C)
 %[text] **Task 10.** Test the circuit using the virtual oscilloscope with the value of $R${"altText":"R"} you identified in **Task 9.** Does the response appear overdamped?
 %[text] 
-%[text] [⇦ DC Circuit Analysis Overview](<matlab: OpenOverview>)
+%[text] [⇦ DC Circuit Analysis Overview](file:../../MainMenu.m)
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]{"version":"1.0"}
 %---
